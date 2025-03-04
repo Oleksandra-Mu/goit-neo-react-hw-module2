@@ -1,0 +1,27 @@
+.status {
+  margin: 0px;
+  padding: 5px 10px;
+}
+
+.online {
+  color: green;
+}
+
+.offline {
+  color: red;
+}
+
+.friendname {
+  font-weight: bold;
+  color: black;
+  margin: 0px;
+}
+
+.friendlistitem {
+  border: 1px solid black;
+  border-radius: 5%;
+}
+
+.avatar {
+  padding: 5px;
+}
