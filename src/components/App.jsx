@@ -44,6 +44,8 @@ export default function App() {
     localStorage.setItem("feedbackValues", JSON.stringify(feedback));
   }, [feedback]);
 
+  const positiveFeedback = Math.round((feedback.good / totalFeedback) * 100);
+
   return (
     <>
       <Description />
@@ -53,7 +55,11 @@ export default function App() {
         resetFeedback={resetFeedback}
       />
       {totalFeedback > 0 ? (
-        <Feedback feedback={feedback} totalFeedback={totalFeedback} />
+        <Feedback
+          feedback={feedback}
+          totalFeedback={totalFeedback}
+          positiveFeedback={positiveFeedback}
+        />
       ) : (
         <Notification />
       )}
